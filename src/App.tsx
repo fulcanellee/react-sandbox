@@ -1,24 +1,80 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {SidePanelMobile} from '@alfalab/core-components-side-panel/mobile'
+import {ConfirmationMobile, useConfirmation} from '@alfalab/core-components-confirmation/mobile'
 
 function App() {
+    const [open, setOpen] = useState(false);
+
+    const handleClose = () => setOpen(false);
+
+    const {
+        setConfirmationState,
+        setConfirmationScreen,
+    } = useConfirmation();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+        <div>123</div>
+      <button onClick={() => setOpen(prev => !prev)}>Открыть</button>
+        <SidePanelMobile open={open} onClose={handleClose}>
+            <SidePanelMobile.Header hasCloser={true}/>
+            <SidePanelMobile.Content>
+                <ConfirmationMobile
+                    screen='INITIAL'
+                    state='INITIAL'
+                    onChangeState={setConfirmationState}
+                    onChangeScreen={setConfirmationScreen}
+                    onInputFinished={() => {}}
+                    onSmsRetryClick={() => {}}
+                />
+            </SidePanelMobile.Content>
+        </SidePanelMobile>
     </div>
   );
 }
