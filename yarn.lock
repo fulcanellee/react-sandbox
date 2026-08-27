@@ -132,6 +132,23 @@
     react-transition-group "^4.4.5"
     tslib "^2.4.0"
 
+"@alfalab/core-components-base-modal@file:.yalc/@alfalab/core-components-base-modal":
+  version "7.1.8"
+  dependencies:
+    "@alfalab/core-components-backdrop" "^5.0.2"
+    "@alfalab/core-components-global-store" "^4.0.1"
+    "@alfalab/core-components-portal" "^5.0.4"
+    "@alfalab/core-components-shared" "^2.2.3"
+    "@alfalab/core-components-stack" "^7.0.1"
+    "@juggle/resize-observer" "^3.3.1"
+    "@types/react-transition-group" "^4.4.12"
+    classnames "^2.5.1"
+    react-focus-lock "^2.12.1"
+    react-merge-refs "^1.1.0"
+    react-remove-scroll "^2.5.5"
+    react-transition-group "^4.4.5"
+    tslib "^2.4.0"
+
 "@alfalab/core-components-bottom-sheet@^8.1.12":
   version "8.1.12"
   resolved "https://registry.yarnpkg.com/@alfalab/core-components-bottom-sheet/-/core-components-bottom-sheet-8.1.12.tgz#93db54458955bda77380a0f23d7beb1f4d9e3cdb"
@@ -1161,19 +1178,6 @@
     classnames "^2.5.1"
     react-merge-refs "^1.1.0"
     tslib "^2.4.0"
-
-"@alfalab/core-components-side-panel@file:.yalc/@alfalab/core-components-side-panel":
-  version "7.1.0"
-  dependencies:
-    "@alfalab/core-components-base-modal" "^7.1.8"
-    "@alfalab/core-components-drawer" "^7.0.10"
-    "@alfalab/core-components-mq" "^6.0.7"
-    "@alfalab/core-components-navigation-bar-private" "^2.0.13"
-    "@alfalab/core-components-shared" "^2.2.3"
-    classnames "^2.5.1"
-    react-merge-refs "^1.1.0"
-    tslib "^2.4.0"
-    use-sync-external-store "^1.4.0"
 
 "@alfalab/core-components-skeleton@^7.0.4":
   version "7.0.4"

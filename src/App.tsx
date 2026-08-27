@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {SidePanelMobile} from '@alfalab/core-components-side-panel/mobile'
+import {BaseModal} from '@alfalab/core-components-base-modal'
 import {ButtonMobile} from '@alfalab/core-components/button/mobile'
 import {ConfirmationMobile, useConfirmation} from '@alfalab/core-components/confirmation/mobile'
 import {Typography} from '@alfalab/core-components/typography'
@@ -68,9 +68,7 @@ function App() {
                 Сменить адрес
             </ButtonMobile>
             <Text />
-            <SidePanelMobile open={open} onClose={handleClose}>
-                <SidePanelMobile.Header sticky={true} hasCloser={true} />
-                <SidePanelMobile.Content>
+            <BaseModal open={open} onClose={handleClose} iOSLock={true}>
                     <ConfirmationMobile
                         screen={confirmationScreen}
                         state={confirmationState}
@@ -82,8 +80,7 @@ function App() {
                         requiredCharAmount={4}
                         alignContent='center'
                     />
-                </SidePanelMobile.Content>
-            </SidePanelMobile>
+            </BaseModal>
         </div>
     );
 }
