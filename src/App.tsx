@@ -68,7 +68,7 @@ function App() {
                 Сменить адрес
             </ButtonMobile>
             <Text />
-            <BaseModal open={open} onClose={handleClose} iOSLock={true}>
+            <BaseModal open={open} onClose={handleClose} scrollLock={true}>
                     <ConfirmationMobile
                         screen={confirmationScreen}
                         state={confirmationState}
