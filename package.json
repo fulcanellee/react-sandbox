@@ -4,9 +4,9 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
+    "@alfalab/core-components": "^50.27.0",
     "@alfalab/core-components-config": "^1.1.0",
-    "@alfalab/core-components-confirmation": "^15.2.0",
-    "@alfalab/core-components-side-panel": "^7.1.0",
+    "@alfalab/core-components-side-panel": "file:.yalc/@alfalab/core-components-side-panel",
     "@alfalab/core-components-stack-context": "^1.0.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
