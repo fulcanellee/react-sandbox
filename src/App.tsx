@@ -51,7 +51,7 @@ const Text = () => (
 
 function App() {
     const [open, setOpen] = React.useState(false);
-    const [open2, setOpen2] = React.useState(false);
+    const [openSidePanel, setOpenSidePanel] = React.useState(false);
     const {
         confirmationState,
         confirmationScreen,
@@ -107,23 +107,23 @@ function App() {
         // пересчитать состояние тулбара заранее.
         window.scrollTo(0, window.scrollY);
 
-        setTimeout(() => setOpen2(true), OPEN_DELAY_MS);
+        setTimeout(() => setOpenSidePanel(true), OPEN_DELAY_MS);
     };
 
     const handleCloseSidePanel = () => {
         // Возвращаем страницу туда, где она была до открытия панели.
         window.scrollTo(0, scrollPositionBeforeOpenRef.current);
-        setOpen2(false);
+        setOpenSidePanel(false);
     };
 
     React.useEffect(() => {
-        if (!open2) return;
+        if (!openSidePanel) return;
 
         // Прижимаем фон к самому верху сразу при открытии панели — ДО того,
         // как пользователь успеет сфокусироваться на поле ввода и вызвать
         // появление клавиатуры.
         window.scrollTo(0, 0);
-    }, [open2]);
+    }, [openSidePanel]);
 
     return (
         <div>
@@ -149,7 +149,7 @@ function App() {
                         alignContent='center'
                     />
             </BaseModal>
-            <SidePanelMobile open={open2} onClose={handleCloseSidePanel}>
+            <SidePanelMobile open={openSidePanel} onClose={handleCloseSidePanel}>
                 <SidePanelMobile.Header sticky={true} hasCloser={true} />
                 <SidePanelMobile.Content>
                     <ConfirmationMobile
