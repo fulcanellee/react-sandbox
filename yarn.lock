@@ -1146,8 +1146,10 @@
     detect-browser "^5.3.0"
     tslib "^2.4.0"
 
-"@alfalab/core-components-side-panel@^7.1.0", "@alfalab/core-components-side-panel@file:.yalc/@alfalab/core-components-side-panel":
+"@alfalab/core-components-side-panel@^7.1.0":
   version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@alfalab/core-components-side-panel/-/core-components-side-panel-7.1.0.tgz#49c9f7cd4988f272f18d054c146b0d6cf5bc395b"
+  integrity sha512-mEhmFyr8LE3UEMX7aiy22AgLdgtamGWiF9BQR8rgkcx/YWnoLVF4atWcMfm/Ep8N31ZKvDxmPDsE/O8UIThdsA==
   dependencies:
     "@alfalab/core-components-base-modal" "^7.1.8"
     "@alfalab/core-components-drawer" "^7.0.10"
