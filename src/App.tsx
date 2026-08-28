@@ -149,7 +149,7 @@ function App() {
                         alignContent='center'
                     />
             </BaseModal>
-            <SidePanelMobile open={open2} onClose={handleCloseSidePanel} scrollLock={true}>
+            <SidePanelMobile open={open2} onClose={handleCloseSidePanel}>
                 <SidePanelMobile.Header sticky={true} hasCloser={true} />
                 <SidePanelMobile.Content>
                     <ConfirmationMobile
