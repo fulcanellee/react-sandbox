@@ -59,11 +59,71 @@ function App() {
         setConfirmationScreen,
     } = useConfirmation();
 
+    const {
+        confirmationState: confirmationState2,
+        confirmationScreen: confirmationScreen2,
+        setConfirmationState: setConfirmationState2,
+        setConfirmationScreen: setConfirmationScreen2,
+    } = useConfirmation();
+
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    const handleOpen2 = () => setOpen2(true);
-    const handleClose2 = () => setOpen2(false);
+    // ---------------------------------------------------------------------
+    // Воркэраунд известного бага WebKit (bugs.webkit.org/show_bug.cgi?id=153224
+    // "Tapping into an <input> within a position:fixed element scrolls to the
+    // top of the page"): на iOS Safari первый фокус на <input> внутри
+    // полноэкранного position:fixed контейнера (наш SidePanelMobile) вызывает
+    // визуальный "скачок" контента в момент появления клавиатуры.
+    //
+    // Причина: вместо того чтобы скроллить саму модалку, Safari в этот момент
+    // компенсирует фокус, пытаясь скроллить ФОНОВУЮ страницу под модалкой —
+    // и это ломает позиционирование её fixed-элементов. Баг официально закрыт
+    // WebKit в 2016-м, но задокументированно регрессировал повторно на iOS
+    // 15.4.1 в 2022-м — то есть это системное, а не разово исправленное
+    // ограничение движка.
+    //
+    // Идея воркэраунда: если фоновая страница уже прижата к самому верху
+    // (scrollTop === 0) к моменту появления клавиатуры, скроллить физически
+    // некуда — компенсации Safari не за что "зацепиться", и скачок не
+    // происходит. Ниже — минимальная реализация этой идеи для SidePanelMobile.
+    // ---------------------------------------------------------------------
+
+    /** Позиция скролла страницы до открытия панели — чтобы вернуть её обратно при закрытии. */
+    const scrollPositionBeforeOpenRef = React.useRef(0);
+
+    /**
+     * Небольшая пауза перед открытием панели. Если у Safari в этот момент ещё
+     * развёрнут тулбар (адресная строка), она обычно схлопывается только на
+     * реальный touch-скролл — пауза даёт шанс этому схлопыванию завершиться
+     * ДО появления клавиатуры, а не одновременно с ним.
+     */
+    const OPEN_DELAY_MS = 100;
+
+    const handleOpenSidePanel = () => {
+        scrollPositionBeforeOpenRef.current = window.scrollY;
+
+        // "Трогаем" скролл ещё до открытия панели — это может подтолкнуть Safari
+        // пересчитать состояние тулбара заранее.
+        window.scrollTo(0, window.scrollY);
+
+        setTimeout(() => setOpen2(true), OPEN_DELAY_MS);
+    };
+
+    const handleCloseSidePanel = () => {
+        // Возвращаем страницу туда, где она была до открытия панели.
+        window.scrollTo(0, scrollPositionBeforeOpenRef.current);
+        setOpen2(false);
+    };
+
+    React.useEffect(() => {
+        if (!open2) return;
+
+        // Прижимаем фон к самому верху сразу при открытии панели — ДО того,
+        // как пользователь успеет сфокусироваться на поле ввода и вызвать
+        // появление клавиатуры.
+        window.scrollTo(0, 0);
+    }, [open2]);
 
     return (
         <div>
@@ -72,11 +132,11 @@ function App() {
             <ButtonMobile type='button' size={40} onClick={handleOpen}>
                 Сменить адрес
             </ButtonMobile>
-            <ButtonMobile type='button' size={40} onClick={handleOpen2}>
+            <ButtonMobile type='button' size={40} onClick={handleOpenSidePanel}>
                 Сменить адрес Side Panel
             </ButtonMobile>
             <Text />
-            <BaseModal open={open} onClose={handleClose}>
+            <BaseModal open={open} onClose={handleClose} scrollLock={true}>
                     <ConfirmationMobile
                         screen={confirmationScreen}
                         state={confirmationState}
@@ -89,16 +149,16 @@ function App() {
                         alignContent='center'
                     />
             </BaseModal>
-            <SidePanelMobile open={open2} onClose={handleClose2}>
+            <SidePanelMobile open={open2} onClose={handleCloseSidePanel} scrollLock={true}>
                 <SidePanelMobile.Header sticky={true} hasCloser={true} />
                 <SidePanelMobile.Content>
                     <ConfirmationMobile
-                        screen={confirmationScreen}
-                        state={confirmationState}
-                        onChangeState={setConfirmationState}
-                        onChangeScreen={setConfirmationScreen}
-                        onInputFinished={() => setConfirmationState('INITIAL')}
-                        onSmsRetryClick={() => setConfirmationState('INITIAL')}
+                        screen={confirmationScreen2}
+                        state={confirmationState2}
+                        onChangeState={setConfirmationState2}
+                        onChangeScreen={setConfirmationScreen2}
+                        onInputFinished={() => setConfirmationState2('INITIAL')}
+                        onSmsRetryClick={() => setConfirmationState2('INITIAL')}
                         phone='+7 ··· ··· 07 24'
                         requiredCharAmount={4}
                         alignContent='center'
