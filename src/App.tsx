@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
 import {BaseModal} from '@alfalab/core-components-base-modal'
-import {ButtonMobile} from '@alfalab/core-components/button/mobile'
-import {ConfirmationMobile, useConfirmation} from '@alfalab/core-components/confirmation/mobile'
-import {Typography} from '@alfalab/core-components/typography'
-import {Gap} from '@alfalab/core-components/gap'
+import {ButtonMobile} from '@alfalab/core-components-button/mobile'
+import {ConfirmationMobile, useConfirmation} from '@alfalab/core-components-confirmation/mobile'
+import {Typography} from '@alfalab/core-components-typography'
+import {Gap} from '@alfalab/core-components-gap'
+import {SidePanelMobile} from '@alfalab/core-components-side-panel/mobile'
 
 const Text = () => (
     <>
@@ -50,6 +51,7 @@ const Text = () => (
 
 function App() {
     const [open, setOpen] = React.useState(false);
+    const [open2, setOpen2] = React.useState(false);
     const {
         confirmationState,
         confirmationScreen,
@@ -60,6 +62,9 @@ function App() {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
+    const handleOpen2 = () => setOpen2(true);
+    const handleClose2 = () => setOpen2(false);
+
     return (
         <div>
             <Gap size={32} />
@@ -67,8 +72,11 @@ function App() {
             <ButtonMobile type='button' size={40} onClick={handleOpen}>
                 Сменить адрес
             </ButtonMobile>
+            <ButtonMobile type='button' size={40} onClick={handleOpen2}>
+                Сменить адрес Side Panel
+            </ButtonMobile>
             <Text />
-            <BaseModal open={open} onClose={handleClose} scrollLock={true}>
+            <BaseModal open={open} onClose={handleClose}>
                     <ConfirmationMobile
                         screen={confirmationScreen}
                         state={confirmationState}
@@ -81,6 +89,22 @@ function App() {
                         alignContent='center'
                     />
             </BaseModal>
+            <SidePanelMobile open={open2} onClose={handleClose2}>
+                <SidePanelMobile.Header sticky={true} hasCloser={true} />
+                <SidePanelMobile.Content>
+                    <ConfirmationMobile
+                        screen={confirmationScreen}
+                        state={confirmationState}
+                        onChangeState={setConfirmationState}
+                        onChangeScreen={setConfirmationScreen}
+                        onInputFinished={() => setConfirmationState('INITIAL')}
+                        onSmsRetryClick={() => setConfirmationState('INITIAL')}
+                        phone='+7 ··· ··· 07 24'
+                        requiredCharAmount={4}
+                        alignContent='center'
+                    />
+                </SidePanelMobile.Content>
+            </SidePanelMobile>
         </div>
     );
 }
