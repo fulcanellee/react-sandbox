@@ -5,6 +5,7 @@
   "homepage": "./",
   "dependencies": {
     "@alfalab/core-components": "^50.27.0",
+    "@alfalab/core-components-code-input": "file:.yalc/@alfalab/core-components-code-input",
     "@alfalab/core-components-config": "^1.1.0",
     "@alfalab/core-components-stack-context": "^1.0.1",
     "@testing-library/jest-dom": "^5.14.1",

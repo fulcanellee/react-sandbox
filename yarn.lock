@@ -307,6 +307,14 @@
     classnames "^2.5.1"
     tslib "^2.4.0"
 
+"@alfalab/core-components-code-input@file:.yalc/@alfalab/core-components-code-input":
+  version "5.1.1"
+  dependencies:
+    "@alfalab/core-components-mq" "^6.0.7"
+    "@alfalab/hooks" "^1.13.1"
+    classnames "^2.5.1"
+    tslib "^2.4.0"
+
 "@alfalab/core-components-collapse@^6.0.3":
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/@alfalab/core-components-collapse/-/core-components-collapse-6.0.3.tgz#6a7c41010dfc20508c3ebf2623d323dff4b5b751"
