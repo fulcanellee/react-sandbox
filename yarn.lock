@@ -297,17 +297,7 @@
     classnames "^2.5.1"
     tslib "^2.4.0"
 
-"@alfalab/core-components-code-input@^5.1.1":
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/@alfalab/core-components-code-input/-/core-components-code-input-5.1.1.tgz#179dfc49442c42ea55cb53f110dcf00242e31538"
-  integrity sha512-3j3ikYsmiUrpAJ2G4g5KNfnS+djvQf7+nulZsAU0RMIm9xwOGm1IMAKQPWSf7K+5w0I53D/4kNIZb07YCYAhIQ==
-  dependencies:
-    "@alfalab/core-components-mq" "^6.0.7"
-    "@alfalab/hooks" "^1.13.1"
-    classnames "^2.5.1"
-    tslib "^2.4.0"
-
-"@alfalab/core-components-code-input@file:.yalc/@alfalab/core-components-code-input":
+"@alfalab/core-components-code-input@^5.1.1", "@alfalab/core-components-code-input@file:.yalc/@alfalab/core-components-code-input":
   version "5.1.1"
   dependencies:
     "@alfalab/core-components-mq" "^6.0.7"

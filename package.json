@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "./",
+  "resolutions": {
+    "@alfalab/core-components-code-input": "file:.yalc/@alfalab/core-components-code-input"
+  },
   "dependencies": {
     "@alfalab/core-components": "^50.27.0",
     "@alfalab/core-components-code-input": "file:.yalc/@alfalab/core-components-code-input",
