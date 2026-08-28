@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import {BaseModal} from '@alfalab/core-components-base-modal'
-import {ButtonMobile} from '@alfalab/core-components-button/mobile'
-import {ConfirmationMobile, useConfirmation} from '@alfalab/core-components-confirmation/mobile'
-import {Typography} from '@alfalab/core-components-typography'
-import {Gap} from '@alfalab/core-components-gap'
-import {SidePanelMobile} from '@alfalab/core-components-side-panel/mobile'
+import {BaseModal} from '@alfalab/core-components/base-modal'
+import {ButtonMobile} from '@alfalab/core-components/button/mobile'
+import {ConfirmationMobile, useConfirmation} from '@alfalab/core-components/confirmation/mobile'
+import {Typography} from '@alfalab/core-components/typography'
+import {Gap} from '@alfalab/core-components/gap'
+import {SidePanelMobile} from '@alfalab/core-components/side-panel/mobile'
 
 const Text = () => (
     <>
