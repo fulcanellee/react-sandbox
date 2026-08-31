@@ -3,12 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "./",
-  "resolutions": {
-    "@alfalab/core-components-code-input": "file:.yalc/@alfalab/core-components-code-input"
-  },
   "dependencies": {
     "@alfalab/core-components": "^50.27.0",
-    "@alfalab/core-components-code-input": "file:.yalc/@alfalab/core-components-code-input",
+    "@alfalab/core-components-code-input": "5.1.2-d7433b3ab674bd56e6856f67f96cb743146b9e1b",
     "@alfalab/core-components-config": "^1.1.0",
     "@alfalab/core-components-stack-context": "^1.0.1",
     "@testing-library/jest-dom": "^5.14.1",
