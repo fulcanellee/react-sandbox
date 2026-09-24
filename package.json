@@ -8,6 +8,7 @@
     "@alfalab/core-components-list": "^5.0.12",
     "@alfalab/core-components-themes": "^15.2.1",
     "@alfalab/core-components-typography": "^6.0.11",
+    "@alfalab/core-components-vars": "^11.3.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",

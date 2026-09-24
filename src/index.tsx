@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import '@alfalab/core-components-themes/mobile.css';
-import '@alfalab/core-components-themes/dark.css';
 import './index.css';
 import App from './App';
 
