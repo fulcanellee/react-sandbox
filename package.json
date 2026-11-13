@@ -4,9 +4,10 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
-    "@alfalab/core-components-bottom-sheet": "file:.yalc/@alfalab/core-components-bottom-sheet",
+    "@alfalab/core-components-bottom-sheet": "8.1.20",
     "@alfalab/core-components-config": "^1.1.0",
     "@alfalab/core-components-stack-context": "^1.0.1",
+    "@alfalab/core-components-switch": "^6.2.4",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
