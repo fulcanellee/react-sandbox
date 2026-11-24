@@ -36,14 +36,12 @@
     react-transition-group "^4.4.5"
     tslib "^2.4.0"
 
-"@alfalab/core-components-bottom-sheet@8.1.20":
-  version "8.1.20"
-  resolved "https://registry.yarnpkg.com/@alfalab/core-components-bottom-sheet/-/core-components-bottom-sheet-8.1.20.tgz#35e071b2cefca459381f8c6452a3fdadffdb58ef"
-  integrity sha512-IqxjidV9+8ZcpfQ3EINkW5/tf8pCcMF7w07mamfj2jQLFWpsSTyzP3Q+Rv2eYf1tsEV1W12Zw9UUT9CD0RoN3A==
+"@alfalab/core-components-bottom-sheet@file:.yalc/@alfalab/core-components-bottom-sheet":
+  version "8.1.22"
   dependencies:
     "@alfalab/core-components-backdrop" "^5.0.2"
     "@alfalab/core-components-base-modal" "^7.2.3"
-    "@alfalab/core-components-navigation-bar-private" "^2.0.19"
+    "@alfalab/core-components-navigation-bar-private" "^2.0.20"
     "@alfalab/core-components-shared" "^2.4.0"
     "@alfalab/core-components-types" "^2.1.0"
     classnames "^2.5.1"
@@ -105,15 +103,15 @@
     "@alfalab/hooks" "^1.17.0"
     tslib "^2.4.0"
 
-"@alfalab/core-components-navigation-bar-private@^2.0.19":
-  version "2.0.19"
-  resolved "https://registry.yarnpkg.com/@alfalab/core-components-navigation-bar-private/-/core-components-navigation-bar-private-2.0.19.tgz#56838521f288403186ab6304cb0b6b7999fc7f5a"
-  integrity sha512-Zd1WZ8BuJcDnXGtj6uhNHhwcJUvN5dcSIW1ykqs1ucnGK2DbOXYOyk/lgy2XYZ3EzOzBjzZHY0D3SWCw8HiHSQ==
+"@alfalab/core-components-navigation-bar-private@^2.0.20":
+  version "2.0.20"
+  resolved "https://registry.yarnpkg.com/@alfalab/core-components-navigation-bar-private/-/core-components-navigation-bar-private-2.0.20.tgz#a6eee4ff9d58b4a072eae1cfec5d602e439514b0"
+  integrity sha512-q0TZQM58aKTW1dWIpqzfcL30P+fjb1NAJ2iW6v62fvxDttfjYMvByF9x2ut6xOACRYt3g3kJUxstmfx/94M3hg==
   dependencies:
     "@alfalab/core-components-button" "^13.3.0"
     "@alfalab/core-components-icon-button" "^8.0.15"
     "@alfalab/core-components-shared" "^2.4.0"
-    "@alfalab/core-components-typography" "^6.0.14"
+    "@alfalab/core-components-typography" "^6.0.15"
     "@alfalab/hooks" "^1.17.0"
     "@alfalab/icons-glyph" "^2.294.0"
     classnames "^2.5.1"
@@ -199,10 +197,10 @@
   resolved "https://registry.yarnpkg.com/@alfalab/core-components-types/-/core-components-types-2.1.0.tgz#1a521e055460488481a9f7c28c090237fbac082d"
   integrity sha512-RCcQLRxxx2OD39BAk2BuvBDue3937Ome7VqBRQdx5Q7PlCrN4hZdMRe40apx4Vxw0zGwgC/RA4sAKTz5ZeY/0g==
 
-"@alfalab/core-components-typography@^6.0.14":
-  version "6.0.14"
-  resolved "https://registry.yarnpkg.com/@alfalab/core-components-typography/-/core-components-typography-6.0.14.tgz#ca07fda3fca3b56ba005e8ba67e076b34e54f039"
-  integrity sha512-YLJc6YI+6dVECZQUeqKFTLq8NHv551//FCvGtWDdj6KngrfjQ8qGNIV65hox9+7hsxLmSi5MBGMEnwsK0bC8jQ==
+"@alfalab/core-components-typography@^6.0.15":
+  version "6.0.15"
+  resolved "https://registry.yarnpkg.com/@alfalab/core-components-typography/-/core-components-typography-6.0.15.tgz#6bfd52b9f53bf2cce949510994086b7aa18d5a14"
+  integrity sha512-Yj9JFHrwUA9NQLyq2xuWoeNmqghByi2atp6+HI995ttIIRid2rUgKA7Ygkwsl3OhyjAXWporC2Vempnw6JRI1w==
   dependencies:
     "@alfalab/core-components-mq" "^6.0.10"
     "@alfalab/core-components-shared" "^2.4.0"
@@ -225,9 +223,9 @@
     uuid "^14.0.0"
 
 "@alfalab/icons-glyph@^2.294.0":
-  version "2.295.0"
-  resolved "https://registry.yarnpkg.com/@alfalab/icons-glyph/-/icons-glyph-2.295.0.tgz#c23abd739fa40cfe901e6b80009958257d29ce91"
-  integrity sha512-UaHNzFWTuWgtcWFxB+ZA1n0vf6D71RCfoa4f2BlGLSprZlzaQG40toWz8cT1+KnADh75z0qfWp1Ar00iPM4Vgg==
+  version "2.296.0"
+  resolved "https://registry.yarnpkg.com/@alfalab/icons-glyph/-/icons-glyph-2.296.0.tgz#7017e0dbc7adad94aad3afc0e9c375f93b6bd832"
+  integrity sha512-wH8KQ7Kw/9yAXbg27/geinimXTaM51IircEQa8oEn4Q86MjLM7un3cYhQxlil64+eCi6LVImzRsT1t03JLWUTQ==
 
 "@alfalab/utils@^1.22.0":
   version "1.22.0"
@@ -1347,9 +1345,9 @@
   integrity sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==
 
 "@babel/runtime@^7.0.0", "@babel/runtime@^7.12.13", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
-  version "7.29.14"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.29.14.tgz#9ad0cc2addbbc8c46adaec9e90b21bb76d42b483"
-  integrity sha512-Y5tqevQaUAZhhj82BpYMNC1ssvLQTVAfwKdm8iy8qwmhvC2/CpcAu8OC+QEtjM7pMk7knx83u1Qj8gzkicyelw==
+  version "7.29.15"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.29.15.tgz#fd047349f32c2e89c28527e023af277e3dc747b6"
+  integrity sha512-304gsbbGVmQc+cNGHzwHBlqepYdWLKj3VXCQBGt/EGcV7PUPfKI7kAUNW1FZEOCwlQiLvQjg1JEaAlRQ616h+Q==
 
 "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.16.3", "@babel/runtime@^7.23.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.24.5"
