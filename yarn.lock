@@ -36,8 +36,10 @@
     react-transition-group "^4.4.5"
     tslib "^2.4.0"
 
-"@alfalab/core-components-bottom-sheet@file:.yalc/@alfalab/core-components-bottom-sheet":
+"@alfalab/core-components-bottom-sheet@8.1.22":
   version "8.1.22"
+  resolved "https://registry.yarnpkg.com/@alfalab/core-components-bottom-sheet/-/core-components-bottom-sheet-8.1.22.tgz#06e99fe12d5a8797e84310f2d73166dfdfc922e3"
+  integrity sha512-rhCficrp8E0TgeN5cvQUhlBR6UmLokT2NpSuuqEV1JS1EZGaav1BSW/ZBqlQOekYHV2EcCi5KgmjdJEWhRBMKw==
   dependencies:
     "@alfalab/core-components-backdrop" "^5.0.2"
     "@alfalab/core-components-base-modal" "^7.2.3"

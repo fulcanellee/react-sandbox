@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
-    "@alfalab/core-components-bottom-sheet": "file:.yalc/@alfalab/core-components-bottom-sheet",
+    "@alfalab/core-components-bottom-sheet": "8.1.22",
     "@alfalab/core-components-config": "^1.1.0",
     "@alfalab/core-components-stack-context": "^1.0.1",
     "@alfalab/core-components-switch": "^6.2.4",
